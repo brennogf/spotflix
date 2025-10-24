@@ -1,10 +1,10 @@
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import path from "path";
 import { fileURLToPath } from "url";
 import routes from "./routes.js";
-
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,6 +18,12 @@ mongoose.connect(process.env.DATABASE_URL, {
   useCreateIndex: true,
 });
 
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  optionsSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(routes);
 

@@ -7,10 +7,11 @@
   "scripts": {
     "build": "npx babel src --extensions \".js\" --out-dir dist --copy-files --no-copy-ignored && cd ../frontend && npm run build",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "concurrently \" nodemon src/index.js\" \"cd ../frontend && npm run start \"",
     "deploy": "npm install --frozen-lockfile --legacy-peer-deps && npx babel src --extensions '.js' --out-dir dist --copy-files --no-copy-ignored && cd ../frontend && npm install --frozen-lockfile --legacy-peer-deps && NODE_OPTIONS=--openssl-legacy-provider npm run build"
   },
   "dependencies": {
+    "concurrently": "^9.2.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "eslint": "7.2.0",

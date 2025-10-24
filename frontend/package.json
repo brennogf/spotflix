@@ -19,7 +19,6 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "dev": "concurrently \" npm start\" \"cd ../backend && npm run dev \"",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
@@ -42,7 +41,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "concurrently": "^5.2.0",
     "eslint": "6.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
