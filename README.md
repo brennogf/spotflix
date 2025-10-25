@@ -31,7 +31,7 @@ $ git clone https://github.com/brennogf/spotflix
 
 # Prepare o banco de dados:
 # Crie um .env dentro da pasta "backend" e cole:
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres?schema=spotflix
+DATABASE_URL=mongodb://localhost:27017
 
 # Inicie o Docker
 $ cd spotflix
