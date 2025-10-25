@@ -27,14 +27,14 @@ Para clonar e executar este aplicativo, você precisará [Git](https://git-scm.c
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/brennogf/proffy
+$ git clone https://github.com/brennogf/spotflix
 
 # Prepare o banco de dados:
 # Crie um .env dentro da pasta "backend" e cole:
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres?schema=proffy
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres?schema=spotflix
 
 # Inicie o Docker
-$ cd sistolda
+$ cd spotflix
 $ docker-compose up -d
 
 # Instale as dependências
